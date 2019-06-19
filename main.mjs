@@ -1,4 +1,4 @@
-import {SubjectsModel, LMSModel} from './school'
+import {SubjectsModel, LMSModel, TeachersModel, PupilsModel, GradebooksMode} from './school'
 
 const history = new SubjectsModel({
   title: 'History',
@@ -6,19 +6,14 @@ const history = new SubjectsModel({
 });
 
 // will return subjectId
-console.log(history.id);
 
 const lms = new LMSModel();
-lms.remove(history);
 lms.add(history);
 
 // will return true or false. Answer will be true if we added this subject to lms
-lms.verify(history);
+console.log(lms.verify(history));
 
 // will return array of registered subjects
-lms.readAll();
-[
-  {
-    subjectId: null
-  }
-]
+console.log(lms.readAll());
+
+

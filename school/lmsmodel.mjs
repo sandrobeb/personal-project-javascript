@@ -28,4 +28,7 @@ export class LMSModel {
             return false;
         }
     }
+    readAll() {
+        return [this.subjects]
+    }
 }
